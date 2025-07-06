@@ -1,4 +1,4 @@
-package pkg
+package answer
 
 type Node struct {
 	key, value int

@@ -1,4 +1,4 @@
-package pkg
+package answer
 
 func FindKthLargest(nums []int, k int) int {
 	n := len(nums)

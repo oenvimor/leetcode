@@ -1,19 +1,4 @@
-package pkg
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func ArrToList(arr []int) *ListNode {
-	head := &ListNode{}
-	curr := head
-	for _, v := range arr {
-		curr.Next = &ListNode{Val: v}
-		curr = curr.Next
-	}
-	return head.Next
-}
+package answer
 
 func ReverseList(head *ListNode) *ListNode {
 	var prev *ListNode // 初始化头节点

@@ -1,4 +1,4 @@
-package pkg
+package answer
 
 func lengthOfLongestSubstring(s string) int {
 	charIdxMap := make(map[byte]int)

@@ -7,6 +7,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func ArrToList(arr []int) *ListNode {
 	head := &ListNode{}
 	curr := head

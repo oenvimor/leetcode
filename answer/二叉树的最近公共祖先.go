@@ -1,5 +1,7 @@
 package answer
 
+import "fmt"
+
 func LowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	if root == nil || root == p || root == q {
 		return root
@@ -45,4 +47,31 @@ func BuildTree(nums []interface{}) *TreeNode {
 	}
 
 	return root
+}
+
+func FindTree(root *TreeNode) (*TreeNode, *TreeNode) {
+	// 辅助函数：在树中查找值为 target 的节点
+	var findNode func(*TreeNode, int) *TreeNode
+	findNode = func(node *TreeNode, target int) *TreeNode {
+		if node == nil {
+			return nil
+		}
+		if node.Val == target {
+			return node
+		}
+		left := findNode(node.Left, target)
+		if left != nil {
+			return left
+		}
+		return findNode(node.Right, target)
+	}
+
+	p := findNode(root, 7)
+	q := findNode(root, 4)
+
+	if p == nil || q == nil {
+		fmt.Println("节点不存在")
+		return nil, nil
+	}
+	return p, q
 }

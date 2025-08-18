@@ -18,7 +18,7 @@ func LowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	return right
 }
 
-func BuildTree(nums []interface{}) *TreeNode {
+func BuildTreeV1(nums []interface{}) *TreeNode {
 	if len(nums) == 0 || nums[0] == nil {
 		return nil
 	}

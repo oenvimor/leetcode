@@ -29,12 +29,12 @@ func MinDistance(word1 string, word2 string) int {
 	return dp[m][n]
 }
 
-func MinNum(num ...int) int {
-	minNum := int(1e9)
-	for _, v := range num {
-		if v < minNum {
-			minNum = v
-		}
-	}
-	return minNum
-}
+//func MinNum(num ...int) int {
+//	minNum := int(1e9)
+//	for _, v := range num {
+//		if v < minNum {
+//			minNum = v
+//		}
+//	}
+//	return minNum
+//}
